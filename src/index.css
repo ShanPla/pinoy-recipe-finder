@@ -28,12 +28,10 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-
-  /* 🔥 Animated gradient background */
-  background: linear-gradient(-45deg, #ff9a8b, #ff6a00, #ffcc70, #ffe985);
-  background-size: 400% 400%;
-  animation: gradientBG 15s ease infinite;
-
+  background-image: url('/assets/bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: #213547;
 }
 

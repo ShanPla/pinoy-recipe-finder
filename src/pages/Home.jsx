@@ -23,8 +23,8 @@ const Home = () => {
               key={recipe.id}
               className={
                 filtered.length === 1
-                  ? "col-12 col-md-6 col-lg-4"
-                  : "col-6 col-md-3"
+                  ? "col-12 col-md-6 col-lg-5"
+                  : "col-12 col-md-3"
               }
             >
               <RecipeCard

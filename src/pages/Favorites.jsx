@@ -28,7 +28,7 @@ const Favorites = () => {
               key={recipe.id}
               className={
                 filteredFavorites.length === 1
-                  ? "col-12 col-md-6 col-lg-4"
+                  ? "col-12 col-md-6 col-lg-5"
                   : "col-6 col-md-3"
               }
             >
