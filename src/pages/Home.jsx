@@ -13,13 +13,28 @@ const Home = () => {
   return (
     <div className="container py-4">
       <SearchBar search={search} setSearch={setSearch} />
-      <div className="row g-4 align-items-stretch">
-        {filtered.map((recipe) => (
-          <div className="col-md-3" key={recipe.id}>
-            <RecipeCard recipe={recipe} />
-          </div>
-        ))}
-      </div>
+
+      {filtered.length === 0 ? (
+        <p className="text-center mt-4">No such item exists in the menu.</p>
+      ) : (
+        <div className="row g-4 justify-content-center">
+          {filtered.map((recipe) => (
+            <div
+              key={recipe.id}
+              className={
+                filtered.length === 1
+                  ? "col-12 col-md-6 col-lg-4"
+                  : "col-6 col-md-3"
+              }
+            >
+              <RecipeCard
+                recipe={recipe}
+                single={filtered.length === 1}
+              />
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
