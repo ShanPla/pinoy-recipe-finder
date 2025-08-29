@@ -7,11 +7,11 @@ import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css"; // Bootstrap import
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <FavoritesProvider>
-        <App />
-      </FavoritesProvider>
-    </BrowserRouter>
-  </React.StrictMode>
+  <FavoritesProvider>
+    <React.StrictMode>
+      <BrowserRouter>
+          <App />
+      </BrowserRouter>
+    </React.StrictMode>
+  </FavoritesProvider>
 );
